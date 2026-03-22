@@ -1,2 +1,209 @@
-# ecis2026-sustainalyzer-online-appendix
-Online appendix that holds supporting information regarding the conducted literature review as well as interview protocols for the development of the tool Sustainalyzer 
+# Online Appendix: Sustainalyzer (ECIS 2026 Submission)
+
+This repository contains the supplementary methodological details for the paper "Sustainalyzer – An Analysis Tool for Sustainability Communication on Social Media", addressing the space limitations of the conference format.
+Concretely, the following details are addressed:
+
+* [1. Systematic Literature Review Overview](#1-systematic-literature-review-overview)
+* [2. Expert Interviews Overview](#2-expert-interviews-overview)
+* [3. Design Requirements Details](#3-design-requirements-details)
+* [4. References](#4-references)
+  
+
+## 1. Systematic Literature Review Overview
+
+### 1.1 Methodology
+To ensure methodological rigor, the literature review was structured following the established framework by vom Brocke et al. (2009). The process encompasses five phases:
+
+#### *Phase 1: Definition of Review Scope*
+Following Cooper’s (1988) taxonomy, the review focuses on research outcomes and methodologies at the intersection of social media analytics and sustainability communication. The goal is to integrate existing knowledge to identify critical capabilities and derive robust Design Requirements (DRs) for the proposed artifact.
+
+#### *Phase 2: Conceptualization of Topic*
+The literature search was structured around three core conceptual blocks to ensure high construct validity:
+1. **Context:** Social Media (e.g., X, Twitter)
+2. **Domain:** Sustainability (e.g., CSR, ESG, Triple Bottom Line)
+3. **Method/Outcome:** Analytics, Text Mining, and Decision-Making Capabilities
+
+#### *Phase 3: Literature Search*
+The following table displays the used search criteria as well as guiding principles to ensure comprehensive coverage:
+
+| Attribute | Value |
+| :--- | :--- |
+| Time Period | 2015 - 2025 |
+| Databases | Google Scholar, IEEE Xplore, SAGE Publications, SpringerLink, AIS Electronic Library,  , Emerald Insight, ACM Digital Library |
+| Search Fields | Title, Abstract, Keywords|
+| Search query | ("social media" OR "SM" OR "SMA") AND ("sustainab*" OR "CSR" OR "ESG" OR "Triple Bottom Line") AND ("text mining" OR "analytic*" OR "capabilit*" OR "decision making" OR "DDDM") |
+| Inclusion/Exclusion Criteria | Only peer-reviewed journal and conference papers in English | Must refer to social media analysis and sustainability communication
+
+
+
+
+#### *Phase 4: Literature Analysis and Synthesis*
+
+The initial database search yielded a total of 1812 results. In the first step, the results were filtered to represent only sources in English. This way the initial results were reduced to 1491 paper. Second, The results were screened for duplicates leading to a further reduction to 1265 paper candidates. Next, a rigorous screening of titles and abstracts was conducted based on the defined inclusion and exclusion criteria. This step reduced the pool to 178 candidate papers for further analysis. During this phase, a substantial number of articles were excluded because they solely discussed general sustainability communication, marketing, or PR strategies without addressing the technological intersection of social media analytics, text mining, or data-driven decision support. In the final step, a full-text assessment was performed to ensure strict alignment with the research focus. Ultimately, this synthesis process resulted in a final sample of 28 highly relevant papers that were retained for the in-depth qualitative content analysis. To systematically synthesize the findings and derive the Design Requirements, the final literature list was analyzed using qualitative content analysis according to Mayring (2014). An inductive categorization approach was applied to extract recurring challenges and required capabilities.
+
+
+#### *Phase 5: Research Agenda*
+
+The derived DRs are operationalized to guide the iterative design and prototyping of Sustainalyzer. This phase defines the research agenda by aligning the technical functionalities of the artifact with the strategic requirements of sustainability experts, ensuring that the tool provides a solution to the identified problems.
+
+
+
+## 2. Expert Interviews Overview
+To elicit comprehensive and robust Design Requirements, semi-structured expert interviews were conducted. A purposive sampling strategy was applied to capture distinct strategic perspectives by purposefully selecting experts from both the corporate sector and management consulting. This dual-perspective approach ensures that the developed artifact accommodates different analytical objectives and scopes:
+
+**1. Corporate Perspective:** Experts from within organizations focus on optimizing their own company’s sustainability communication, mitigating individual greenwashing risks, and extracting direct, actionable insights for internal reputation management.
+
+**2. Consulting Perspective:** Experts from the consulting sector operate across organizational boundaries. Their objective is to deliver strategic impact for diverse clients, establish cross-industry benchmarks, and analyze broader, market-wide sustainability discourses.
+
+Integrating both viewpoints ensures that the resulting Design Requirements lead to a highly versatile and broadly applicable social media analytics artifact.
+
+| Expert ID | Industry / Sector | Current Role | Years of Experience | Interview Duration |
+| :--- | :--- | :--- | :--- | :--- |
+| E1 | Manufacturing | Head of Corporate Sustainability | 7 | 45 min |
+| E2 | Manufacturing | Sustainability Professional | 5 | 50 min |
+| E3 | Consulting | Senior Consultant ESG Reporting | 3 | 25 min |
+| E4 | Consulting | Manager ESG Reporting | 8 | 40 min |
+
+**Interview Setup & Analysis:**
+- *Location / Platform:* Microsoft Teams Calls
+- *Approach:* The interviews were semi-structured avoiding voiding interviewer-led prompting of pre-identified DRs. This way, the risk of a confirmation bias (a simple "yes I find that also helpful") was reduced. So rather, the needs and requirements of the interviewees were identified via talking about specific real-world pain points of the specific industry or use case. For details see the interview protocols attached. 
+- *Documentation:* MS Teams internal transcription functionality was used to document the interview outcomes. The transcripts were then translated into English as all interviewees were German natives. The transcribed answers were then summarized with AI to enhance readability and avoid redundancies.
+- *Analysis:* The given answers were analyzed using qualitative content analysis (Mayring, 2014) to systematically combine them with the results from the literature review results as well identify new DRs.
+
+*(Note: The interview guide is provided as a separate PDF file in this online appendix: [Interview Guideline](./Interview-Guideline.pdf))*
+
+## 3. Design Requirements Details
+### 3.1 Mapping Table
+The following table demonstrates the chain of evidence, tracing each Design Requirement back to the identified literature and allocates the sustainability experts based on the interview results (see also 3.2).
+
+| Design Requirement | Source: Literature | Source: Expert Interview |
+| :--- | :--- | :--- |
+| **DR1:** Ability to extract a large number of social media posts from the past until the present (via X) | (Grevy Gotfredsen, 2023)(Bisbee & Munger, 2025) | E1; E3; E4|
+| **DR2:** Extension of generic keyword post extraction to collect sustainability domain-specific information | (Patuelli et al., 2021)(Park et al., 2022)(Alkhodair et al., 2018) | - |
+| **DR3:** Classification of social media posts in TBL dimensions | (Morales-Hernandez et al., 2022)(Park et al., 2022)(Sokolov et al., 2021)(Tang et al., 2023) | E1; E2 |
+| **DR4:** Consideration of Sentiment of user posts on TBL dimensions | (Arya et al., 2023)(Cao, 2023)(Kudalkar, 2023)(Manetti & Bellucci, 2016)(Nguyen, 2024) | - |
+| **DR5:** Ability to analyse TBL dimensions over time | (Aalijah, 2025)(Domalewska, 2021)(Jha & Verma, 2022)(Liang et al., 2020)(Nicolas et al., 2024)(Park et al., 2022) | E1; E2 |
+| **DR6:** Gap analysis between organisation & user narratives | (Oppong-Tawiah & Webster, 2023)(Dwivedi et al., 2023)(Jha & Verma, 2024) | E2 |
+| **DR7:** Correlation of engagement metrics with TBL dimensions | (Aksoy et al., 2022)(Bahar, 2023)(Kim & Hara, 2024)(Russo et al., 2022) | - |
+| **DR8:** Visualization of results | (Asiri & Aksoy, 2022)(Jemiard Mmasomwayera Sinkula, 2024)(Stieglitz et al., 2018) | E1; E2 |
+| **DR9:** (Cross)-sector benchmarking | - | E1; E3; E4 |
+| **DR10:** Comparison of CSR report content with social media content | - | E1; E2; E4 |
+
+### 3.2 Expert Interview Design Requirement Quotes
+The following tables provides an overview of the exact quotes from the interviewed experts that could be mapped to the Design Requirements above.
+For a detailed analysis of each interview please refer to the respective interview protocol ([Interview Protocol Expert 1 (E1)](./Interview-protocol_expert_1.pdf)|[Interview Protocol Expert 2 (E2)](./Interview-protocol_expert_2.pdf)|[Interview Protocol Expert 3 (E3)](./Interview-protocol_expert_3.pdf)|[Interview Protocol Expert 4 (E4)](./Interview-protocol_expert_4.pdf))
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Expert</th>
+      <th>mapped DR</th>
+      <th>Quote</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="6"><strong>E1</strong></td>
+      <td>DR1</td>
+      <td>"...Also, we usually only realize there is a problem when a topic is already blowing up. We don't see it building up over time. To really understand if a specific issue has been a problem for a while, we would desperately need the ability to extract a large number of social media posts over time..."</td>
+    </tr>
+    <tr>
+      <td>DR3</td>
+      <td>"...It would save us weeks of reading through comments if we had the capability for an automatic classification of social media posts in the different sustainability dimensions..."</td>
+    </tr>
+    <tr>
+      <td>DR5</td>
+      <td>"...It is important to continuously check whether we are actually in line with the general perception of sustainability trends and how those trends evolved,..."</td>
+    </tr>
+    <tr>
+      <td>DR8</td>
+      <td>"...If I open a tool, I need to instantly understand everything that is going on without having to read a manual. So, a simple dashboard is an absolute must-have for me..."</td>
+    </tr>
+    <tr>
+      <td>DR9</td>
+      <td>"...I'm also really interested in what others are doing and how they are performing... "</td>
+    </tr>
+    <tr>
+      <td>DR10</td>
+      <td>"...We spend so much time on those reports, and we need to know if the topics resonate..."</td>
+    </tr>
+    <tr>
+      <td rowspan="5"><strong>E2</strong></td>
+      <td>DR3</td>
+      <td>"...So at the end of the day, to really understand the public perception, I still end up just manually scrolling through the comment sections with my coffee in the morning, which obviously takes forever...What we really need to make this data actually workable for my reporting is an automated classification and not just some generic topic clustering, which are quite off in a lot of cases..."</td>
+    </tr>
+    <tr>
+      <td>DR5</td>
+      <td>"...We need to continuously check if our internal roadmap is still in line with the general perception of sustainability trends. These things move so fast on social media...I need to see how those trends evolved over the last months ..."</td>
+    </tr>
+    <tr>
+      <td>DR6</td>
+      <td>"...But if people in the comments are actually completely ignoring the (anonymized product here) and instead discussing our supply chain issues in Asia, those generic tools completely miss it..."</td>
+    </tr>
+    <tr>
+      <td>DR8</td>
+      <td>"...if I could just see the trends at a glance, like through some sort of intuitive dashboard with heatmaps or graphs, where I can immediately spot which ESG topics are gaining traction..."</td>
+    </tr>
+      <tr>
+      <td>DR10</td>
+      <td>"...But once it's published as a PDF on our website, we just cross our fingers and hope it actually covers the topics people care about. Sometimes the social media team posts a snippet from my report, and the comments are just crickets, or people complain about something entirely different..."</td>
+    </tr>
+    <tr>
+      <td rowspan="2"><strong>E3</strong></td>
+      <td>DR1</td>
+      <td>"...we need to know what the public has been saying over the last two or three years to identify long-term trends or recurring controversies. But getting our hands on that older, historical data is incredibly difficult and expensive with standard listening tools..."</td>
+    </tr>
+    <tr>
+      <td>DR9</td>
+      <td>"...Clients don't just want to know how they are doing in a vacuum; they want to know how they stack up against the rest of the market..."</td>
+    </tr>
+    <tr>
+      <td rowspan="3"><strong>E4</strong></td>
+      <td>DR1</td>
+      <td>"...I need to be able to pull a massive archive of data that goes back years, not just weeks, to really get the big picture..."</td>
+    </tr>
+    <tr>
+      <td>DR9</td>
+      <td>"...I need the ability to instantly see how my client is performing relative to the rest of the industry or their direct DAX competitors..."</td>
+    </tr>
+    <tr>
+      <td>DR10</td>
+      <td>"...It's almost impossible right now to systematically map what’s written in the official report against what the public is actually shouting about online..."</td>
+  </tbody>
+</table>
+
+
+## 4. References
+- **Aalijah, K. (2025).** Leveraging Social Media Analytics for Sustainability Trend Detection in Saudi Arabia’s Evolving Market. International Journal of Research Publication and Reviews, 6(3), 5540–5548.
+- **Aksoy, L., Buoye, A. J., Fors, M., Keiningham, T. L., & Rosengren, S. (2022).** Environmental, Social and Governance (ESG) metrics do not serve services customers: A missing link between sustainability metrics and customer perceptions of social innovation. Journal of Service Management, 33(4/5), 565–577.
+- **Alkhodair, S. A., Fung, B. C. M., Rahman, O., & Hung, P. C. K. (2018).** Improving interpretations of topic modeling in microblogs. Journal of the Association for Information Science and Technology, 69(4), 528–540.
+- **Arya, V., Mishra, A. K., & González-Briones, A. (2023).** Sentiments Analysis of Covid-19 Vaccine Tweets Using Machine Learning and Vader Lexicon Method. ADCAIJ: Advances in Distributed Computing and Artificial Intelligence Journal, 11(4), 507–518.
+- **Asiri, H., & Aksoy, M. S. (2022).** SOCIAL MEDIA DATA VISUALIZATION: A REVIEW. International Conferences Computer Graphics, Visualization, Computer Vision and Image Processing.
+- **Bahar, R. (2023).** Digital Media Strategies in Promoting Sustainable Consumption: An Evaluation of BIST Sustainability 25 Index Companie. MindVanguard: Beyond Behavior, 1(1), 11–21.
+- **Bisbee, J., & Munger, K. (2025).** The Vibes Are Off: Did Elon Musk Push Academics Off Twitter? PS: Political Science & Politics, 58(1), 139–146.
+- **Brocke, J. V., Simons, A., Niehaves, B., Niehaves, B., Riemer, K., Plattfaut, R., & Cleven, A. (2009).** Reconstructing the giant: On the importance of rigour in documenting the literature search process. 
+- **Cao, L. (2023).** Sentiment Analysis of Social Media Text Based on Deep Learning. 2023 3rd International Conference on Mobile Networks and Wireless Communications (ICMNWC), 1–5.
+- **Cooper, H. M. (1988).** Organizing knowledge syntheses: A taxonomy of literature reviews. Knowledge in society, 1(1), 104.
+- **Domalewska, D. (2021).** A Longitudinal Analysis of the Creation of Environmental Identity and Attitudes towards Energy Sustainability Using the Framework of Identity Theory and Big Data Analysis. Energies, 14(3), 647.
+- **Dwivedi, Y. K., Ismagilova, E., Rana, N. P., & Raman, R. (2023).** Social Media Adoption, Usage And Impact In Business-To-Business (B2B) Context: A State-Of-The-Art Literature Review. Information Systems Frontiers, 25(3), 971–993.
+- **Grevy Gotfredsen, S. (2023).** Q&A: What happened to academic research on Twitter? Columbia Journalism Review.
+- **Jemiard Mmasomwayera Sinkula, D. (2024).** Perspective Chapter: Social Media Analytics – The Pavers of Business Model Development. In Social Media and Modern Society—How Social Media Are Changing the Way We Interact with the World Around. IntechOpen. 
+- **Jha, A. K., & Verma, N. K. (2022).** Social Media Sustainability Communication: An Analysis of Firm Behaviour and Stakeholder Responses. Information Systems Frontiers.
+- **Jha, A. K., & Verma, N. K. (2024).** Social media platforms and user engagement: A multi-platform study on one-way firm sustainability communication. Information Systems Frontiers, 26(1), 177-194.
+- **Kim, E., & Hara, N. (2024).** Identifying Different Semantic Features of Public Engagement with Climate Change NGOs Using Semantic Network Analysis. Sustainability, 16(4), 1438.
+- **Kudalkar, D. (2023).** Social Media Sentiment Analysis. International Journal for Research in Applied Science and Engineering Technology, 11(10), 1696–1708.
+- **Liang, H., Ganeshbabu, U., & Thorne, T. (2020).** A Dynamic Bayesian Network Approach for Analysing Topic-Sentiment Evolution. IEEE Access, 8, 54164–54174.
+- **Manetti, G., & Bellucci, M. (2016).** The use of social media for engaging stakeholders in sustainability reporting. Accounting, Auditing & Accountability Journal.
+- **Mayring, P. (2014).** Qualitative content analysis: Theoretical foundation, basic procedures and software solution.
+- **Morales-Hernandez, R. C., Jaguey, J. G., & Becerra-Alonso, D. (2022).** A Comparison of Multi-Label Text Classification Models in Research Articles Labeled With Sustainable Development Goals. IEEE Access, 10, 123534–123548.
+- **Nguyen, H.-H. (2024).** Enhancing Sentiment Analysis on Social Media Data with Advanced Deep Learning Techniques. International Journal of Advanced Computer Science and Applications, 15(5).
+- **Nicolas, M. L. D., Desroziers, A., Caccioli, F., & Aste, T. (2024).** ESG reputation risk matters: An event study based on social media data. Finance Research Letters, 59, 104712.
+- **Oppong-Tawiah, D., & Webster, J. (2023).** Corporate sustainability communication as ‘fake news’: Firms’ greenwashing on Twitter. Sustainability, 15(8), 6683.
+- **Park, J., Choi, W., & Jung, S.-U. (2022).** Exploring Trends in Environmental, Social, and Governance Themes and Their Sentimental Value Over Time. Frontiers in Psychology, 13, 890435.
+- **Patuelli, A., Caldarelli, G., Lattanzi, N., & Saracco, F. (2021).** Firms’ challenges and social responsibilities during Covid-19: A Twitter analysis. PLOS ONE, 16(7), e0254748.
+- **Russo, S., Schimperna, F., Lombardi, R., & Ruggiero, P. (2022).** Sustainability performance and social media: An explorative analysis. Meditari Accountancy Research, 30(4), 1118–1140. 
+- **Sokolov, A., Mostovoy, J., Ding, J., & Seco, L. (2021).** Building Machine Learning Systems for Automated ESG Scoring. The Journal of Impact and ESG Investing, 1(3), 39–50.
+- **Stieglitz, S., Mirbabaie, M., Ross, B., & Neuberger, C. (2018).** Social media analytics – Challenges in topic discovery, data collection, and data preparation. International Journal of Information Management, 39, 156–168. 
+- **Tang, M., Yang, W., Li, Y., & Zeng, Q. (2023).** Research on multi-label long text classification algorithm based on transformer-LDA. In Y. Zhong (Ed.), Fifth International Conference on Computer Information Science and Artificial Intelligence (CISAI 2022) (p. 138). SPIE.
+
